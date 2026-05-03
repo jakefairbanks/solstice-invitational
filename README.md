@@ -31,3 +31,7 @@ design/                 Original Claude Design source bundle
 ## Deployment
 
 This is a static site — Vercel auto-detects and serves it with no build step.
+
+## Live site
+
+[solsticeinvitational.com](https://solsticeinvitational.com)
