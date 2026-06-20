@@ -51,6 +51,28 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  // ----- Mobile menu (hamburger) -----
+  const burger = document.querySelector(".ssi-burger");
+  const mobileMenu = document.querySelector(".ssi-mobile-menu");
+  const setMenuOpen = (open) => {
+    document.body.classList.toggle("menu-open", open);
+    if (burger) burger.setAttribute("aria-expanded", open ? "true" : "false");
+    if (mobileMenu) mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+  };
+  if (burger && mobileMenu) {
+    burger.addEventListener("click", () => {
+      setMenuOpen(!document.body.classList.contains("menu-open"));
+    });
+    mobileMenu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => setMenuOpen(false));
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && document.body.classList.contains("menu-open")) {
+        setMenuOpen(false);
+      }
+    });
+  }
+
   // ----- Smooth-scroll for in-page anchors that account for fixed nav -----
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
