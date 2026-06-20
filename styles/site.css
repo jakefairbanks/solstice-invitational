@@ -1710,15 +1710,48 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   margin: 32px 0 0;
 }
 
+/* Tablet (between phone and desktop) */
+@media (min-width: 541px) and (max-width: 880px) {
+  .leaderboard-table { max-width: 100%; }
+  .lb-row { grid-template-columns: 88px 1fr 120px; padding: 26px 32px; }
+  .lb-row .lb-rank { font-size: 26px; }
+  .lb-row .lb-name { font-size: 24px; }
+  .lb-row .lb-pts { font-size: 36px; }
+  .lb-row.first { padding-top: 40px; padding-bottom: 32px; }
+  .lb-row.first .lb-name { font-size: 26px; }
+  .lb-row.first .lb-pts { font-size: 44px; }
+}
+
+/* Phone */
 @media (max-width: 540px) {
-  .lb-row { grid-template-columns: 56px 1fr 72px; padding: 16px 18px; }
-  .lb-row .lb-rank { font-size: 18px; }
-  .lb-row .lb-name { font-size: 17px; }
-  .lb-row .lb-pts { font-size: 22px; }
-  .lb-row.first .lb-pts { font-size: 26px; }
-  .lb-row.first { padding-top: 28px; padding-bottom: 22px; }
-  .lb-row.first::before { font-size: 10px; }
-  .lb-row.tied .lb-rank { font-size: 15px; }
+  .leaderboard-table { max-width: 100%; margin-top: 40px; border-radius: 14px; }
+  .lb-row {
+    grid-template-columns: 60px 1fr 96px;
+    padding: 22px 18px;
+    gap: 14px;
+  }
+  .lb-row .lb-rank { font-size: 26px; }
+  .lb-row .lb-name { font-size: 22px; line-height: 1.15; }
+  .lb-row .lb-pts { font-size: 36px; }
+  .lb-row.first {
+    padding-top: 42px;
+    padding-bottom: 30px;
+  }
+  .lb-row.first .lb-rank { font-size: 28px; }
+  .lb-row.first .lb-name { font-size: 24px; }
+  .lb-row.first .lb-pts { font-size: 46px; }
+  .lb-row.first::before { font-size: 10px; top: 10px; }
+  .lb-row.tied .lb-rank { font-size: 20px; }
+  .lb-updated { font-size: 13px; margin-top: 24px; padding: 0 16px; }
+}
+
+/* Very narrow phones — keep names from clipping */
+@media (max-width: 380px) {
+  .lb-row { grid-template-columns: 48px 1fr 82px; padding: 20px 14px; gap: 10px; }
+  .lb-row .lb-name { font-size: 20px; }
+  .lb-row .lb-pts { font-size: 32px; }
+  .lb-row.first .lb-name { font-size: 22px; }
+  .lb-row.first .lb-pts { font-size: 40px; }
 }
 
 /* ============================================================
