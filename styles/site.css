@@ -1689,9 +1689,9 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   letter-spacing: .18em;
   opacity: .7;
 }
-/* Co-leaders (tied for I): show eyebrow only on the first of the pair */
+/* Co-leaders (tied for 1st): show eyebrow only on the first of the pair */
 .lb-row.co-first + .lb-row.co-first::before { content: none; }
-.lb-row.co-first::before { content: "— tied for I —"; }
+.lb-row.co-first::before { content: "— tied for 1st —"; }
 .lb-row.first .lb-rank { color: var(--gold-bright); font-weight: 500; }
 .lb-row.first .lb-name { font-weight: 600; }
 .lb-row.first .lb-pts {
@@ -1701,8 +1701,6 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   color: transparent;
   font-size: 32px;
 }
-
-.lb-row.tied .lb-rank { font-size: 18px; }
 
 .lb-updated {
   text-align: center;
@@ -1744,7 +1742,6 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   .lb-row.first .lb-name { font-size: 24px; }
   .lb-row.first .lb-pts { font-size: 46px; }
   .lb-row.first::before { font-size: 10px; top: 10px; }
-  .lb-row.tied .lb-rank { font-size: 20px; }
   .lb-updated { font-size: 13px; margin-top: 24px; padding: 0 16px; }
 }
 
