@@ -1711,6 +1711,27 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   margin: 32px 0 0;
 }
 
+/* Purse prize tag — sits beneath the points number on top-3 rows */
+.lb-prize {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--gold-bright);
+  letter-spacing: .03em;
+  text-align: right;
+  line-height: 1;
+  margin-top: 6px;
+}
+.lb-row.first .lb-prize {
+  font-size: 18px;
+  background: linear-gradient(180deg, #F4E5C0 0%, #E2BA5A 60%, #B5862A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Tablet (between phone and desktop) */
 @media (min-width: 541px) and (max-width: 880px) {
   .leaderboard-table { max-width: 100%; }
@@ -1721,6 +1742,8 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   .lb-row.first { padding-top: 40px; padding-bottom: 32px; }
   .lb-row.first .lb-name { font-size: 26px; }
   .lb-row.first .lb-pts { font-size: 44px; }
+  .lb-prize { font-size: 18px; margin-top: 8px; }
+  .lb-row.first .lb-prize { font-size: 20px; }
 }
 
 /* Phone */
@@ -1742,6 +1765,8 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   .lb-row.first .lb-name { font-size: 24px; }
   .lb-row.first .lb-pts { font-size: 46px; }
   .lb-row.first::before { font-size: 10px; top: 10px; }
+  .lb-prize { font-size: 18px; margin-top: 8px; }
+  .lb-row.first .lb-prize { font-size: 22px; }
   .lb-updated { font-size: 13px; margin-top: 24px; padding: 0 16px; }
 }
 
@@ -1752,6 +1777,8 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   .lb-row .lb-pts { font-size: 32px; }
   .lb-row.first .lb-name { font-size: 22px; }
   .lb-row.first .lb-pts { font-size: 40px; }
+  .lb-prize { font-size: 16px; }
+  .lb-row.first .lb-prize { font-size: 19px; }
 }
 
 /* ============================================================
