@@ -1689,6 +1689,9 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   letter-spacing: .18em;
   opacity: .7;
 }
+/* Co-leaders (tied for I): show eyebrow only on the first of the pair */
+.lb-row.co-first + .lb-row.co-first::before { content: none; }
+.lb-row.co-first::before { content: "— tied for I —"; }
 .lb-row.first .lb-rank { color: var(--gold-bright); font-weight: 500; }
 .lb-row.first .lb-name { font-weight: 600; }
 .lb-row.first .lb-pts {
