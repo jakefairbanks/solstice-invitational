@@ -1677,7 +1677,7 @@ section.band-dark  { background: var(--ink); color: var(--paper); }
   position: relative;
 }
 .lb-row.first::before {
-  content: "— champion's row —";
+  content: "— champion —";
   position: absolute;
   top: 6px;
   left: 50%;
